@@ -1,6 +1,7 @@
 from datetime import datetime
 from sqlalchemy.orm import Session
 from app import models, schemas
+from schemas import BaseModel
 
 # Create a new post
 def create_post(db: Session, post: schemas.PostCreate):
