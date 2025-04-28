@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from app import models, schemas
 from schemas import BaseModel
 
-# Create a new post
+#//////////////////////
 def create_post(db: Session, post: schemas.PostCreate):
     db_post = models.Post(**post.dict())
     db.add(db_post)
