@@ -21,7 +21,8 @@ def register(user: schemas.UserCreate, db: Session = Depends(auth.get_db)):
 
     logger.info(f"New user registered: {new_user.username}")
     return new_user
-#---------------------------------------------
+#-------------------------------------------
+#----------------------
 # Login and generate access token
 @router.post("/token", response_model=schemas.Token)
 def login_for_access_token(
